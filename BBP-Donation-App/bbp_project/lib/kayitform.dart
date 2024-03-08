@@ -1,3 +1,6 @@
+//Bu class veri tabanını bağlamak için
+//Ömer ve Samet tarafından deneme amaçlı oluşturuldu
+
 import 'package:flutter/material.dart';
 import 'package:postgres/postgres.dart';
 
