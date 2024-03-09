@@ -1,5 +1,5 @@
 import 'package:bbp_project/product/home_page_view.dart';
-import 'package:bbp_project/product/application_registration_form_view.dart';
+import 'package:bbp_project/product/applicant_registration_form_view.dart';
 import 'package:bbp_project/product/language/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
           appBarTheme: const AppBarTheme(
+              //AppBar içerisine okul logosu eklenecek
               centerTitle: true,
               backgroundColor: Color.fromRGBO(
                   178, 27, 10, 1), //colorlar için bir class yapılacak

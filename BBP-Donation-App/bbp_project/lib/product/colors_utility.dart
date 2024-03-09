@@ -1,2 +1,2 @@
-//Bu class projenin renk paletini organize edebilmek için oluşturuldu
-//Şimdilik boş duruyor, düzenelenecek
+///Bu class projenin renk paletini organize edebilmek için oluşturuldu
+///Şimdilik boş duruyor, düzenelenecek
