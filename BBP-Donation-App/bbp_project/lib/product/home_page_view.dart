@@ -100,12 +100,13 @@ Widget customElevatedButton({
     child: ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xFF28246E),
+        backgroundColor: Colors.white,
+        //Color(0xFF28246E),
       ),
       child: Text(
         text,
         style: const TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontSize: 11,
         ),
         textAlign: TextAlign.center,
