@@ -1,4 +1,4 @@
-///Bu class başvuran kayıt formunu ekrana çizdirmek için oluşturuldu
+///Bu class başvuran kayıt formunu ekrana çizdirmek için oluşturuldu.
 
 //telefonda klavye açıldığında oluşan ekran kayması düzeltilecek!!
 
@@ -12,7 +12,8 @@ class ApplicantRegistrationForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(LanguageItems.applicantRegistrationFormViewAppBarTitle),
+        title:
+            const Text(LanguageItems.applicantRegistrationFormViewAppBarTitle),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -21,38 +22,38 @@ class ApplicantRegistrationForm extends StatelessWidget {
             labelText: LanguageItems.applicantRegistrationFormViewIsimLabelText,
             hintText: LanguageItems.applicantRegistrationFormViewIsimHintText,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const FormFieldWithLabel(
             labelText:
                 LanguageItems.applicantRegistrationFormViewSoyIsimLabelText,
             hintText:
                 LanguageItems.applicantRegistrationFormViewSoyIsimHintText,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const FormFieldWithLabel(
             labelText:
                 LanguageItems.applicantRegistrationFormViewNumaraLabelText,
             hintText: LanguageItems.applicantRegistrationFormVieWNumaraHintText,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const FormFieldWithLabel(
             labelText:
                 LanguageItems.applicantRegistrationFormViewEmailLabelText,
             hintText: LanguageItems.applicantRegistrationFormViewEmailHintText,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const FormFieldWithLabel(
             labelText:
                 LanguageItems.applicantRegistrationFormViewAdresLabelText,
             hintText: LanguageItems.applicantRegistrationFormViewAdresHintText,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const FormFieldWithLabel(
             labelText:
                 LanguageItems.applicantRegistrationFormViewTarihLabelText,
             hintText: LanguageItems.applicantRegistrationFormViewTarihHintText,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: [
               StatefulBuilder(

@@ -63,6 +63,9 @@ flutter:
   assets:
   - assets/png/dpu-logo1.png
   - assets/png/laptop.png
+  - assets/png/kampus1.png
+  - assets/png/kampus2.png
+  - assets/png/kampus3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

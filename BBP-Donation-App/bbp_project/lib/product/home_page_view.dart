@@ -1,17 +1,20 @@
 ///Bu class uygulama açıldığında bizi karşılayan ana sayfayı
-///ekrana çizdirilmek için oluşturuldu
+///ekrana çizdirilmek için oluşturuldu.
 
-//Bazı yapılar için o yapılara özgü dosyalar oluşturulup OOP hedeflenecek
 //color, margin, padding yapıları standartlaştırılacak
 //arrow ikonlarının onPressed yapıları işe yarar hale getirilecek
 
 import 'package:bbp_project/product/about_us_view.dart';
 import 'package:bbp_project/product/account_type_choosing_view.dart';
+import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/contact_us_view.dart';
 import 'package:bbp_project/product/image_items.dart';
 import 'package:bbp_project/product/language/languages.dart';
 import 'package:bbp_project/product/login_view.dart';
 import 'package:flutter/material.dart';
+import 'custom_elevated_button.dart';
+import 'custom_app_bar.dart';
+import 'png_images.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -20,13 +23,13 @@ class HomePageView extends StatefulWidget {
 }
 
 class HomePageViewState extends State<HomePageView> {
-  static int _numberOfComputersDonated = 0;
+  static const int _numberOfComputersDonated = 0;
   //bu değişkenin tuttuğu veri daha sonra backend ile
   //db kullanılarak oluşturulup çekilecek
 
   static int get numberOfComputersDonated => _numberOfComputersDonated;
 
-  //bu değişkenin tutacağı veri backendde oluşturulup fronta çekilecek
+  //bu değişkenin tutacağı veri BACKENDDE oluşturulup fronta çekilecek
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +43,7 @@ class HomePageViewState extends State<HomePageView> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  customElevatedButton(
+                  CustomElevatedButton(
                     text: LanguageItems.homePageViewHesapOlusturButtonText,
                     onPressed: () {
                       Navigator.push(
@@ -52,7 +55,7 @@ class HomePageViewState extends State<HomePageView> {
                     },
                   ),
                   const SizedBox(width: 8),
-                  customElevatedButton(
+                  CustomElevatedButton(
                     text: LanguageItems.homePageViewGirisYapButtonText,
                     onPressed: () {
                       Navigator.push(
@@ -63,7 +66,7 @@ class HomePageViewState extends State<HomePageView> {
                     },
                   ),
                   const SizedBox(width: 8),
-                  customElevatedButton(
+                  CustomElevatedButton(
                     text: LanguageItems.homePageViewBizKimizButtonText,
                     onPressed: () {
                       Navigator.push(
@@ -74,7 +77,7 @@ class HomePageViewState extends State<HomePageView> {
                     },
                   ),
                   const SizedBox(width: 8),
-                  customElevatedButton(
+                  CustomElevatedButton(
                     text: LanguageItems.homePageViewIletisimButtonText,
                     onPressed: () {
                       Navigator.push(
@@ -95,27 +98,31 @@ class HomePageViewState extends State<HomePageView> {
               children: [
                 PageView(
                   children: [
-                    PngImages(pngName: ImageItems().universityLogo),
-                    PngImages(pngName: ImageItems().universityLogo),
-                    PngImages(pngName: ImageItems().universityLogo),
-                    PngImages(pngName: ImageItems().universityLogo),
-                    PngImages(pngName: ImageItems().universityLogo),
+                    PngImages(
+                        pngName: ImageItems().campusPhoto1,
+                        fitType: BoxFit.contain),
+                    PngImages(
+                        pngName: ImageItems().campusPhoto2,
+                        fitType: BoxFit.contain),
+                    PngImages(
+                        pngName: ImageItems().campusPhoto3,
+                        fitType: BoxFit.contain),
                     // Diğer fotoğrafları buraya ekleyin
                   ],
                 ),
                 Positioned(
                   left: 16,
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back_ios_sharp),
-                    color: Colors.white,
+                    icon: const Icon(Icons.arrow_back_ios_sharp),
+                    color: ColorUtility.textColorOfProject,
                     onPressed: () {},
                   ),
                 ),
                 Positioned(
                   right: 16,
                   child: IconButton(
-                    icon: Icon(Icons.arrow_forward_ios_sharp),
-                    color: Colors.white,
+                    icon: const Icon(Icons.arrow_forward_ios_sharp),
+                    color: ColorUtility.textColorOfProject,
                     onPressed: () {},
                   ),
                 ),
@@ -154,7 +161,7 @@ class HomePageViewState extends State<HomePageView> {
                   //bu Card yapısı ileride OOP ye daha uygun hale getirilebilir
                   Card(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
-                    color: Colors.white,
+                    color: ColorUtility.textColorOfProject,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 8.0),
@@ -162,25 +169,25 @@ class HomePageViewState extends State<HomePageView> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           PngImages(
-                            pngName: ImageItems().homePageViewComputerIcon,
+                              pngName: ImageItems().homePageViewComputerIcon,
+                              fitType: BoxFit.contain),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12.0),
+                            child: PngImages(
+                                pngName: ImageItems().homePageViewComputerIcon,
+                                fitType: BoxFit.contain),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 12.0),
                             child: PngImages(
-                              pngName: ImageItems().homePageViewComputerIcon,
-                            ),
+                                pngName: ImageItems().homePageViewComputerIcon,
+                                fitType: BoxFit.contain),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 12.0),
                             child: PngImages(
-                              pngName: ImageItems().homePageViewComputerIcon,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 12.0),
-                            child: PngImages(
-                              pngName: ImageItems().homePageViewComputerIcon,
-                            ),
+                                pngName: ImageItems().homePageViewComputerIcon,
+                                fitType: BoxFit.contain),
                           ),
                         ],
                       ),
@@ -200,70 +207,6 @@ class HomePageViewState extends State<HomePageView> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      title: Align(
-        alignment: Alignment.center,
-        child: Row(
-          children: [
-            SizedBox(
-              height: kToolbarHeight,
-              child: Image.asset(
-                "assets/png/${ImageItems().universityLogo}.png",
-                fit: BoxFit.contain,
-              ),
-            ),
-            const SizedBox(width: 35),
-            const Text(LanguageItems.homePageViewAppBarTitle),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-Widget customElevatedButton({
-  required String text,
-  required VoidCallback onPressed,
-}) {
-  return Expanded(
-    child: ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Color(0xFF28246E),
-        //Color(0xFF28246E),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 11,
-        ),
-        textAlign: TextAlign.center,
-      ),
-    ),
-  );
-}
-
-class PngImages extends StatelessWidget {
-  const PngImages({super.key, required this.pngName});
-  final String pngName;
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset(
-      "assets/png/$pngName.png",
-      fit: BoxFit.contain,
     );
   }
 }

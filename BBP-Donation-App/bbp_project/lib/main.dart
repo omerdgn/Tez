@@ -1,3 +1,4 @@
+import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/home_page_view.dart';
 import 'package:bbp_project/product/applicant_registration_form_view.dart';
 import 'package:bbp_project/product/language/languages.dart';
@@ -5,10 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,17 +19,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
           appBarTheme: const AppBarTheme(
-              //AppBar içerisine okul logosu eklenecek
               centerTitle: true,
-              backgroundColor: Color.fromRGBO(
-                  178, 27, 10, 1), //colorlar için bir class yapılacak
+              backgroundColor: ColorUtility.appBarBackgroundColorOfProject,
               elevation: 0,
               systemOverlayStyle: SystemUiOverlayStyle.light,
               titleTextStyle: TextStyle(
                 color: Colors.white,
                 overflow: TextOverflow.clip,
               ),
-              toolbarTextStyle: TextStyle(color: Colors.white))),
+              toolbarTextStyle:
+                  TextStyle(color: ColorUtility.textColorOfProject))),
       home: const HomePageView(),
     );
   }
