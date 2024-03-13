@@ -1,3 +1,5 @@
+import 'package:bbp_project/product/home_page_view.dart';
+
 ///Bu class porjedeki text yapılarını bir arada tutarak
 ///düzenleme ve güncellemeyi sağlamak için oluşturuldu
 
@@ -6,15 +8,17 @@ class LanguageItems {
   static const mainTitle = 'Bilgisayarsızları Bilgisayarlandırma Projesi';
 
   //home_page_view.dart
+  static int computersDonated = HomePageViewState.numberOfComputersDonated;
   static const homePageViewAppBarTitle = 'EĞİTİMDE TEKNOLOJİ İHTİYAÇTIR!';
   static const homePageViewHesapOlusturButtonText = 'Hesap Oluştur';
   static const homePageViewGirisYapButtonText = 'Giriş Yap';
   static const homePageViewBizKimizButtonText = 'Biz\n Kimiz?';
   static const homePageViewIletisimButtonText = 'İletişim';
-  static const homePageViewProjectNameTitle =
-      'BİLGİSAYARSIZLARI BİLGİSAYARLANDIRMA PROJESİ';
+  static const homePageViewProjectNameTitle = 'BİLGİSAYARSIZ ÖĞRENCİ KALMASIN!';
   static const homePageViewProjectDescriptionParagraph =
       'Üniversitemizin bilgisayara sahip olabilmek için\nmaddi desteğe ihtiyaç duyan öğrencilerimize destek oluyoruz.\nHesap oluşturarak bağış yapabilir veya üniversitemizin öğrencisi olarak bilgisayar başvurusunda bulunabilirsiniz.';
+  static final homePageViewTextOfStudentCountHasDonatedComputer =
+      'BBP İle Bugüne Kadar\n ${computersDonated.toString()} Öğrenciye\nBilgisayar Hediye Edebilmenin Mutluluğunu Yaşıyoruz!';
 
   //applicant_registration_form_view.dart
   static const applicantRegistrationFormViewAppBarTitle = 'Başvuru Kayıt Formu';
