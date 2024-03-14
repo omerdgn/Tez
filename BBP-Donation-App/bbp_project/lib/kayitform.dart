@@ -1,4 +1,4 @@
-///Bu class veri tabanını bağlamak için
+/*///Bu class veri tabanını bağlamak için
 ///Ömer ve Samet tarafından deneme amaçlı oluşturuldu
 
 import 'package:flutter/material.dart';
@@ -210,4 +210,4 @@ class _MyFormState extends State<MyForm> {
     _connection?.close();
     super.dispose();
   }
-}
+}*/
