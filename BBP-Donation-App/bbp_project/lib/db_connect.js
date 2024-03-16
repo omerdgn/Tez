@@ -13,7 +13,7 @@ const config = {
 // Veritabanı havuzunu oluşturun
 const pool = new Pool(config);
 
-pool.query('SELECT * FROM computer', (err, res) => {
+pool.query('INSERT INTO computer (id , "deliveryDate", "givenPersonId") VALUES (2, \'2001-06-06\', 3)', (err, res) => {
     if (err) {
       console.error(err);
       return;
