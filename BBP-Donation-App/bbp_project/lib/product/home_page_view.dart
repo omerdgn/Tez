@@ -8,6 +8,7 @@ import 'package:bbp_project/product/about_us_view.dart';
 import 'package:bbp_project/product/account_type_choosing_view.dart';
 import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/contact_us_view.dart';
+import 'package:bbp_project/product/duration_utility.dart';
 import 'package:bbp_project/product/image_items.dart';
 import 'package:bbp_project/product/language/languages.dart';
 import 'package:bbp_project/product/login_view.dart';
@@ -26,6 +27,8 @@ class HomePageViewState extends State<HomePageView> {
   static const int _numberOfComputersDonated = 0;
   //bu değişkenin tuttuğu veri daha sonra backend ile
   //db kullanılarak oluşturulup çekilecek
+
+  final _pageController = PageController(viewportFraction: 0.9);
 
   static int get numberOfComputersDonated => _numberOfComputersDonated;
 
@@ -97,6 +100,7 @@ class HomePageViewState extends State<HomePageView> {
               alignment: Alignment.center,
               children: [
                 PageView(
+                  controller: _pageController,
                   children: [
                     PngImages(
                         pngName: ImageItems().campusPhoto1,
@@ -113,17 +117,23 @@ class HomePageViewState extends State<HomePageView> {
                 Positioned(
                   left: 16,
                   child: IconButton(
-                    icon: const Icon(Icons.arrow_back_ios_sharp),
-                    color: ColorUtility.textColorOfProject,
-                    onPressed: () {},
+                    onPressed: () {
+                      _pageController.previousPage(
+                          duration: DurationUtility().durationLow,
+                          curve: Curves.ease);
+                    },
+                    icon: const Icon(Icons.chevron_left_sharp),
                   ),
                 ),
                 Positioned(
                   right: 16,
                   child: IconButton(
-                    icon: const Icon(Icons.arrow_forward_ios_sharp),
-                    color: ColorUtility.textColorOfProject,
-                    onPressed: () {},
+                    onPressed: () {
+                      _pageController.nextPage(
+                          duration: DurationUtility().durationLow,
+                          curve: Curves.ease);
+                    },
+                    icon: const Icon(Icons.chevron_right_sharp),
                   ),
                 ),
               ],
