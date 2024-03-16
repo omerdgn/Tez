@@ -37,7 +37,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
 
-  #BURADA SORUN ÇÖZMEK İÇİN HTTP Yİ 1.2.1 DEN BU HALE ÇEVİRDİM
+  #BURADA SORUN ÇÖZMEK İÇİN http Yİ 1.2.1 DEN 1.2.0 HALİNE ÇEVİRDİM
+  #TEKRAR DEĞİŞTİRMEN GEREKİRSE DEĞİŞTİRDİKTEN SONRA
+  #DEBUG CONSOLE UN SAĞINDAKİ TERMİNALE flutter pub get YAZMAN GEREKECEK
+  #pubspec.yaml DOSYASINA (BU DOSYA) SAVE ATMAYI UNUTMA
   cupertino_icons: ^1.0.2
   http: ^1.2.0
   dio: ^5.4.1
