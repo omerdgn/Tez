@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                 overflow: TextOverflow.clip,
               ),
               toolbarTextStyle:
-                  TextStyle(color: ColorUtility.textColorOfProject))),
+                  TextStyle(color: ColorUtility.textWhiteColorOfProject))),
       home: const HomePageView(),
     );
   }

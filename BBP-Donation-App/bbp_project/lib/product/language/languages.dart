@@ -43,4 +43,6 @@ class LanguageItems {
   static const accountTypeChoosingMainText = 'Lütfen Hesap Türünü Seçiniz';
   static const accountTypeChoosingApplicantAccountText = 'Başvuru Hesabı';
   static const accountTypeChoosingDonatertAccountText = 'Bağışçı Hesabı';
+  static const accountTypeChoosingApplicantAccountCaption =
+      "Aktif Üniversite kaydı olan öğrencilerimizden bilgisayar almak";
 }

@@ -171,7 +171,7 @@ class HomePageViewState extends State<HomePageView> {
                   //bu Card yapısı ileride OOP ye daha uygun hale getirilebilir
                   Card(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
-                    color: ColorUtility.textColorOfProject,
+                    color: ColorUtility.textWhiteColorOfProject,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 8.0),
