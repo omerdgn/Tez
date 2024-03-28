@@ -38,4 +38,9 @@ class LanguageItems {
   static const applicantRegistrationFormViewTarihHintText = 'Örn: 12.12.2000';
   static const applicantRegistrationFormViewCheckBoxText = 'Aktif OBS Kaydı';
   static const applicantRegistrationFormViewGonderElevatedButtonText = 'Gönder';
+
+  //acoount_type_choosing_view.dart
+  static const accountTypeChoosingMainText = 'Lütfen Hesap Türünü Seçiniz';
+  static const accountTypeChoosingApplicantAccountText = 'Başvuru Hesabı';
+  static const accountTypeChoosingDonatertAccountText = 'Bağışçı Hesabı';
 }
