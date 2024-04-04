@@ -11,7 +11,7 @@ import 'package:bbp_project/product/contact_us_view.dart';
 import 'package:bbp_project/product/duration_utility.dart';
 import 'package:bbp_project/product/image_items.dart';
 import 'package:bbp_project/product/language/languages.dart';
-import 'package:bbp_project/product/login_view.dart';
+import 'package:bbp_project/product/login_view_applicant.dart';
 import 'package:flutter/material.dart';
 import 'custom_elevated_button.dart';
 import 'custom_app_bar.dart';
@@ -64,7 +64,8 @@ class HomePageViewState extends State<HomePageView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LoginView()),
+                            builder: (context) =>
+                                const AccountTypeChoosingView()),
                       );
                     },
                   ),

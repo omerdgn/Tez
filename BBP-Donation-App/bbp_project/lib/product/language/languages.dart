@@ -44,5 +44,7 @@ class LanguageItems {
   static const accountTypeChoosingApplicantAccountText = 'Başvuru Hesabı';
   static const accountTypeChoosingDonatertAccountText = 'Bağışçı Hesabı';
   static const accountTypeChoosingApplicantAccountCaption =
-      "Aktif Üniversite kaydı olan öğrencilerimizden bilgisayar almak";
+      "Aktif üniversite kaydı olan ve bilgisayar almak için maddi durumu olmayan öğrencilerimiz başvuru hesabı oluşturarak başvuruda bulunabilirler.";
+  static const accountTypeChoosingDonaterAccountCaption =
+      "Öğrencilere bilgisayar temin edilmesi için destek olmak isteyen kişiler bağışçı hesabı oluşturarak bağış yapabilirler.";
 }

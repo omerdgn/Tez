@@ -7,4 +7,6 @@ class ImageItems {
   final String campusPhoto1 = 'kampus1';
   final String campusPhoto2 = 'kampus2';
   final String campusPhoto3 = 'kampus3';
+  final String studentSticker = 'student';
+  final String donateSticker = 'donate';
 }
