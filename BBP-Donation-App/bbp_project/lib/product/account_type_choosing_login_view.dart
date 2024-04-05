@@ -1,13 +1,18 @@
+///Bu class ana sayfadan giriş yap butonuna tıklandığında
+///Hesap giriş türünü seçtirebilmek ve ekrana çizdirebilmek için oluşturuldu
+
 import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/custom_app_bar.dart';
 import 'package:bbp_project/product/custom_elevated_button.dart';
 import 'package:bbp_project/product/image_items.dart';
 import 'package:bbp_project/product/language/languages.dart';
+import 'package:bbp_project/product/login_applicant_view.dart';
+import 'package:bbp_project/product/login_donater_view.dart';
 import 'package:bbp_project/product/png_images.dart';
 import 'package:flutter/material.dart';
 
-class AccountTypeChoosingView extends StatelessWidget {
-  const AccountTypeChoosingView({Key? key}) : super(key: key);
+class AccountTypeChoosingLoginView extends StatelessWidget {
+  const AccountTypeChoosingLoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +21,14 @@ class AccountTypeChoosingView extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const Expanded(
+            Expanded(
               flex: 1,
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 25.0),
+                padding: const EdgeInsets.symmetric(vertical: 25.0),
                 child: SizedBox(
                   child: Text(
-                    LanguageItems.accountTypeChoosingMainText,
-                    style: TextStyle(fontSize: 25),
+                    LanguageItems().accountTypeChoosingLoginChoosingMainText,
+                    style: const TextStyle(fontSize: 25),
                   ),
                 ),
               ),
@@ -41,13 +46,13 @@ class AccountTypeChoosingView extends StatelessWidget {
                         color: ColorUtility.textWhiteColorOfProject,
                         child: Column(
                           children: [
-                            const Expanded(
+                            Expanded(
                                 child: Padding(
-                              padding: EdgeInsets.only(top: 40.0),
+                              padding: const EdgeInsets.only(top: 40.0),
                               child: Text(
-                                LanguageItems
-                                    .accountTypeChoosingApplicantAccountText,
-                                style: TextStyle(
+                                LanguageItems()
+                                    .accountTypeChoosingLoginApplicantAccountText,
+                                style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color:
                                         ColorUtility.textBlackColorOfProject),
@@ -60,13 +65,14 @@ class AccountTypeChoosingView extends StatelessWidget {
                                   pngName: ImageItems().studentSticker,
                                   fitType: BoxFit.scaleDown),
                             )),
-                            const Expanded(
+                            Expanded(
                                 child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10.00),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10.00),
                               child: Text(
-                                LanguageItems
-                                    .accountTypeChoosingApplicantAccountCaption,
-                                style: TextStyle(
+                                LanguageItems()
+                                    .accountTypeChoosingLoginApplicantAccountCaption,
+                                style: const TextStyle(
                                     color:
                                         ColorUtility.textBlackColorOfProject),
                               ),
@@ -76,7 +82,15 @@ class AccountTypeChoosingView extends StatelessWidget {
                                 padding: const EdgeInsets.only(
                                     top: 40.00, bottom: 40.0),
                                 child: CustomElevatedButton(
-                                    text: 'Başvuru Hesabı', onPressed: () {}),
+                                    text: 'Başvuru Hesabı',
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const LoginApplicantView()),
+                                      );
+                                    }),
                               ),
                             )
                           ],
@@ -89,13 +103,13 @@ class AccountTypeChoosingView extends StatelessWidget {
                         color: Colors.white,
                         child: Column(
                           children: [
-                            const Expanded(
+                            Expanded(
                                 child: Padding(
-                              padding: EdgeInsets.only(top: 40.0),
+                              padding: const EdgeInsets.only(top: 40.0),
                               child: Text(
-                                LanguageItems
-                                    .accountTypeChoosingDonatertAccountText,
-                                style: TextStyle(
+                                LanguageItems()
+                                    .accountTypeChoosingLoginDonatertAccountText,
+                                style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color:
                                         ColorUtility.textBlackColorOfProject),
@@ -105,13 +119,14 @@ class AccountTypeChoosingView extends StatelessWidget {
                                 child: PngImages(
                                     pngName: ImageItems().donateSticker,
                                     fitType: BoxFit.scaleDown)),
-                            const Expanded(
+                            Expanded(
                                 child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10.0),
                               child: Text(
-                                LanguageItems
-                                    .accountTypeChoosingDonaterAccountCaption,
-                                style: TextStyle(
+                                LanguageItems()
+                                    .accountTypeChoosingLogintDonaterAccountCaption,
+                                style: const TextStyle(
                                     color:
                                         ColorUtility.textBlackColorOfProject),
                               ),
@@ -121,7 +136,15 @@ class AccountTypeChoosingView extends StatelessWidget {
                                 padding: const EdgeInsets.only(
                                     top: 40.0, bottom: 40.0),
                                 child: CustomElevatedButton(
-                                    text: 'Bağışçı Hesabı', onPressed: () {}),
+                                    text: 'Bağışçı Hesabı',
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const LoginDonaterView()),
+                                      );
+                                    }),
                               ),
                             )
                           ],

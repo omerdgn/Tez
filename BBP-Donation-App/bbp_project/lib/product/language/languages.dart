@@ -39,12 +39,31 @@ class LanguageItems {
   static const applicantRegistrationFormViewCheckBoxText = 'Aktif OBS Kaydı';
   static const applicantRegistrationFormViewGonderElevatedButtonText = 'Gönder';
 
-  //acoount_type_choosing_view.dart
-  static const accountTypeChoosingMainText = 'Lütfen Hesap Türünü Seçiniz';
-  static const accountTypeChoosingApplicantAccountText = 'Başvuru Hesabı';
-  static const accountTypeChoosingDonatertAccountText = 'Bağışçı Hesabı';
-  static const accountTypeChoosingApplicantAccountCaption =
+  //acoount_type_choosing_new_account_view.dart
+  final String accountTypeChoosingNewAccountChoosingMainText =
+      'Lütfen Hesap Kayıt Türünü Seçiniz';
+  final String accountTypeChoosingNewAccountApplicantAccountText =
+      'Başvuru Hesabı';
+  final String accountTypeChoosingNewAccountDonatertAccountText =
+      'Bağışçı Hesabı';
+  final String accountTypeChoosingNewAccountApplicantAccountCaption =
       "Aktif üniversite kaydı olan ve bilgisayar almak için maddi durumu olmayan öğrencilerimiz başvuru hesabı oluşturarak başvuruda bulunabilirler.";
-  static const accountTypeChoosingDonaterAccountCaption =
+  final String accountTypeChoosingNewAccountDonaterAccountCaption =
       "Öğrencilere bilgisayar temin edilmesi için destek olmak isteyen kişiler bağışçı hesabı oluşturarak bağış yapabilirler.";
+
+  //acoount_type_choosing_login_view.dart
+  final String accountTypeChoosingLoginChoosingMainText =
+      'Lütfen Hesap Giriş Türünü Seçiniz';
+  final String accountTypeChoosingLoginApplicantAccountText = 'Başvuru Hesabı';
+  final String accountTypeChoosingLoginDonatertAccountText = 'Bağışçı Hesabı';
+  final String accountTypeChoosingLoginApplicantAccountCaption =
+      "Aktif üniversite kaydı olan ve bilgisayar almak için maddi durumu olmayan öğrencilerimiz başvuru hesabı oluşturarak başvuruda bulunabilirler.";
+  final String accountTypeChoosingLogintDonaterAccountCaption =
+      "Öğrencilere bilgisayar temin edilmesi için destek olmak isteyen kişiler bağışçı hesabı oluşturarak bağış yapabilirler.";
+
+  //login_view_donater.dart
+  final String loginDonaterViewMainText = "Bağışçı Hesabına Giriş Yap";
+  final String textFieldLabelTextForMail = "E-Posta";
+  final String textFieldLabelTextForPassword = "Şifre";
+  final String textForForgottenPasswordButton = "Şifremi Unuttum";
 }

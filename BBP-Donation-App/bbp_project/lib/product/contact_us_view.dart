@@ -2,6 +2,7 @@
 /// İletişim sayfasını ekrana çizdirmek
 /// ve iletişim bilgilerimizi kullancıya sunmak için oluşturuldu.
 
+import 'package:bbp_project/product/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class ContactUsView extends StatelessWidget {
@@ -9,6 +10,8 @@ class ContactUsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      appBar: CustomAppBar(),
+    );
   }
 }

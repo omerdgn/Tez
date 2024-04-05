@@ -5,13 +5,13 @@
 //arrow ikonlarının onPressed yapıları işe yarar hale getirilecek
 
 import 'package:bbp_project/product/about_us_view.dart';
-import 'package:bbp_project/product/account_type_choosing_view.dart';
+import 'package:bbp_project/product/account_type_choosing_login_view.dart';
+import 'package:bbp_project/product/account_type_choosing_new_account_view.dart';
 import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/contact_us_view.dart';
 import 'package:bbp_project/product/duration_utility.dart';
 import 'package:bbp_project/product/image_items.dart';
 import 'package:bbp_project/product/language/languages.dart';
-import 'package:bbp_project/product/login_view_applicant.dart';
 import 'package:flutter/material.dart';
 import 'custom_elevated_button.dart';
 import 'custom_app_bar.dart';
@@ -53,7 +53,7 @@ class HomePageViewState extends State<HomePageView> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                const AccountTypeChoosingView()),
+                                const AccountTypeChoosingNewAccountView()),
                       );
                     },
                   ),
@@ -65,7 +65,7 @@ class HomePageViewState extends State<HomePageView> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                const AccountTypeChoosingView()),
+                                const AccountTypeChoosingLoginView()),
                       );
                     },
                   ),
