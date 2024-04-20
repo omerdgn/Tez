@@ -61,9 +61,16 @@ class LanguageItems {
   final String accountTypeChoosingLogintDonaterAccountCaption =
       "Öğrencilere bilgisayar temin edilmesi için destek olmak isteyen kişiler bağışçı hesabı oluşturarak bağış yapabilirler.";
 
-  //login_view_donater.dart
+  //login_donater_view.dart
   final String loginDonaterViewMainText = "Bağışçı Hesabına Giriş Yap";
   final String textFieldLabelTextForMail = "E-Posta";
   final String textFieldLabelTextForPassword = "Şifre";
-  final String textForForgottenPasswordButton = "Şifremi Unuttum";
+  final String textForForgottenPasswordButton =
+      "Şifremi Unuttum"; //login_applicant_view.dart için de kullanılacak
+
+  //login_applicant_view.dart
+  final String loginApplicantViewMainText = "Başvuru Hesabına Giriş Yap";
+  final String textFieldLabelTextForUniversityObsStudentNumber =
+      "OBS Numarası (Üniversite Öğrenci Numarası)";
+  final String textFieldLabelTextForObsPassword = "OBS Şifresi";
 }
