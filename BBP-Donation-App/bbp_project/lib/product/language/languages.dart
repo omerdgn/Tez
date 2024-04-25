@@ -61,6 +61,13 @@ class LanguageItems {
   final String accountTypeChoosingLogintDonaterAccountCaption =
       "Öğrencilere bilgisayar temin edilmesi için destek olmak isteyen kişiler bağışçı hesabı oluşturarak bağış yapabilirler.";
 
+  //contact_us_view.dart
+  final String contactUsviewMainText = "Bizimle İletişime Geçin";
+  final String contactUsViewMailListTileTitle = "E-Posta Adresi";
+  final String contactUsViewMailListTileSubtitle = "bbpvakfi@gmail.com";
+  final String contactUsViewPhoneNumberListTileTitle = "Telefon Numarası";
+  final String contactUsViewPhoneNumberListTileSubtitle = "+123 456 789";
+
   //login_donater_view.dart
   final String loginDonaterViewMainText = "Bağışçı Hesabına Giriş Yap";
   final String textFieldLabelTextForMail = "E-Posta";
