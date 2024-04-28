@@ -43,7 +43,7 @@ class LanguageItems {
   final String accountTypeChoosingNewAccountChoosingMainText =
       'Lütfen Hesap Kayıt Türünü Seçiniz';
   final String accountTypeChoosingNewAccountApplicantAccountText =
-      'Başvuru Hesabı';
+      'Başvuru Hesabı (Aktif OBS)';
   final String accountTypeChoosingNewAccountDonatertAccountText =
       'Bağışçı Hesabı';
   final String accountTypeChoosingNewAccountApplicantAccountCaption =
@@ -54,7 +54,8 @@ class LanguageItems {
   //acoount_type_choosing_login_view.dart
   final String accountTypeChoosingLoginChoosingMainText =
       'Lütfen Hesap Giriş Türünü Seçiniz';
-  final String accountTypeChoosingLoginApplicantAccountText = 'Başvuru Hesabı';
+  final String accountTypeChoosingLoginApplicantAccountText =
+      'Başvuru Hesabı (Aktif OBS)';
   final String accountTypeChoosingLoginDonatertAccountText = 'Bağışçı Hesabı';
   final String accountTypeChoosingLoginApplicantAccountCaption =
       "Aktif üniversite kaydı olan ve bilgisayar almak için maddi durumu olmayan öğrencilerimiz başvuru hesabı oluşturarak başvuruda bulunabilirler.";
@@ -73,15 +74,20 @@ class LanguageItems {
   final String contactUsViewPhoneNumberListTileTitle = "Telefon Numarası";
   final String contactUsViewPhoneNumberListTileSubtitle = "+123 456 789";
 
+  //sign_up_applicant_view.dart
+  final String signUpApplicantViewMainText = "Aktif OBS Kaydı İle Başvuru Yap";
+  //diğer değişkenler login_applicant_view.dart ile aynı
+
+  //sign_up_donater_view.dart
+
   //login_donater_view.dart
   final String loginDonaterViewMainText = "Bağışçı Hesabına Giriş Yap";
   final String textFieldLabelTextForMail = "E-Posta";
   final String textFieldLabelTextForPassword = "Şifre";
-  final String textForForgottenPasswordButton =
-      "Şifremi Unuttum"; //login_applicant_view.dart için de kullanılacak
+  final String textForForgottenPasswordButton = "Şifremi Unuttum";
 
   //login_applicant_view.dart
-  final String loginApplicantViewMainText = "Başvuru Hesabına Giriş Yap";
+  final String loginApplicantViewMainText = "Aktif OBS Hesabına Giriş Yap";
   final String textFieldLabelTextForUniversityObsStudentNumber =
       "OBS Numarası (Üniversite Öğrenci Numarası)";
   final String textFieldLabelTextForObsPassword = "OBS Şifresi";
