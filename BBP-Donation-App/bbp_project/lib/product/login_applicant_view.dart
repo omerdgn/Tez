@@ -95,22 +95,24 @@ class _LoginApplicantViewState extends State<LoginApplicantView> {
                   onPressed: () {},
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: TextButton(
-                  onPressed: () {
-                    // Unutulan şifre işlemleri buraya eklenecek
-                  },
-                  child: Text(
-                    LanguageItems().textForForgottenPasswordButton,
-                    style: const TextStyle(
-                      color: ColorUtility.appBarBackgroundColorOfProject,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
+
+              //BU KISIMDAKİ ŞİFRE UNUTMA İŞLEMLERİ OBS TARAFIYLA ALAKALIDIR
+              // Padding(
+              //   padding: const EdgeInsets.only(bottom: 20),
+              //   child: TextButton(
+              //     onPressed: () {
+              //       // Unutulan şifre işlemleri buraya eklenecek
+              //     },
+              //     child: Text(
+              //       LanguageItems().textForForgottenPasswordButton,
+              //       style: const TextStyle(
+              //         color: ColorUtility.appBarBackgroundColorOfProject,
+              //         fontSize: 16,
+              //         fontWeight: FontWeight.bold,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
