@@ -61,6 +61,11 @@ class LanguageItems {
   final String accountTypeChoosingLogintDonaterAccountCaption =
       "Öğrencilere bilgisayar temin edilmesi için destek olmak isteyen kişiler bağışçı hesabı oluşturarak bağış yapabilirler.";
 
+  //about_us_view.dart
+  final String aboutUsViewWhoWeAreTitle = "Biz Kimiz?";
+  final String aboutUsViewWhoWeAreText =
+      "\"Bilgisayarsızları Bilgisayarlandırma Projesi\", Kütahya Dumlupınar Üniversitesi'nde eğitim gören ve maddi anlamda desteğe ihtiyaç duyan öğrencilere ücretsiz bilgisayar temin eden bir bağış uygulamasıdır. Bu projenin amacı, teknolojiye erişimde zorluk çeken öğrencilere destek olmak, onların eğitim hayatlarında eşit fırsatlar yakalamasını sağlamak ve dijital çağın gereksinimlerine uygun bir şekilde gelişimlerini teşvik etmektir. Bu uygulama, Bilgisayarsızları Bilgisayarlandırma Vakfı tarafından yürütülen bir projedir. Vakfımız, bilgisayarsız öğrenci kalmaması için özveriyle çalışan bir topluluktur.";
+
   //contact_us_view.dart
   final String contactUsviewMainText = "Bizimle İletişime Geçin";
   final String contactUsViewMailListTileTitle = "E-Posta Adresi";
