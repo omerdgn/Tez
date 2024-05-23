@@ -1,4 +1,5 @@
 class DonaterModel {
+  int? id;
   String? name;
   String? surname;
   String? phoneNum;
@@ -7,7 +8,8 @@ class DonaterModel {
   int? totalDonationAmount;
 
   DonaterModel(
-      {this.name,
+      {this.id,
+      this.name,
       this.surname,
       this.phoneNum,
       this.eMail,
@@ -15,6 +17,7 @@ class DonaterModel {
       this.totalDonationAmount});
 
   DonaterModel.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
     name = json['name'];
     surname = json['surname'];
     phoneNum = json['phoneNum'];
@@ -25,6 +28,7 @@ class DonaterModel {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
     data['name'] = this.name;
     data['surname'] = this.surname;
     data['phoneNum'] = this.phoneNum;
