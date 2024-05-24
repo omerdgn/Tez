@@ -7,7 +7,7 @@ class DonaterModel {
   int? donationCount;
   int? totalDonationAmount;
   String? donaterUserName;
-  String? password;
+  String? donaterPassword;
 
   DonaterModel(
       {this.id,
@@ -18,7 +18,7 @@ class DonaterModel {
       this.donationCount,
       this.totalDonationAmount,
       this.donaterUserName,
-      this.password});
+      this.donaterPassword});
 
   DonaterModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -29,7 +29,7 @@ class DonaterModel {
     donationCount = json['donationCount'];
     totalDonationAmount = json['totalDonationAmount'];
     donaterUserName = json['donaterUserName'];
-    password = json['password'];
+    donaterPassword = json['password'];
   }
 
   Map<String, dynamic> toJson() {
@@ -42,7 +42,7 @@ class DonaterModel {
     data['donationCount'] = this.donationCount;
     data['totalDonationAmount'] = this.totalDonationAmount;
     data['donaterUserName'] = this.donaterUserName;
-    data['password'] = this.password;
+    data['password'] = this.donaterPassword;
     return data;
   }
 }
