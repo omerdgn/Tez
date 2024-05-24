@@ -1,11 +1,12 @@
+import 'package:bbp_project/core/init/database/database_provider.dart';
 import 'package:bbp_project/view/donater/model/donater_model.dart';
 import 'package:sqflite/sqflite.dart';
 
-class DonaterDbProvider {
+class DonaterDbProvider extends DatabaseProvider<DonaterModel> {
   final String _bbpDbName = "bbpDatabase";
   final String _donaterTableName = "donaterTable";
   final int _version = 1;
-  Database? database;
+  late Database database;
 
   String columnId = "id";
   String columnName = "name";
@@ -17,6 +18,7 @@ class DonaterDbProvider {
   String columnDonationCount = "donationCount";
   String columnTotalDonationAmount = "totalDonationAmount";
 
+  @override
   Future<void> open() async {
     database = await openDatabase(_bbpDbName, version: _version,
         onCreate: (db, version) {
@@ -28,99 +30,67 @@ class DonaterDbProvider {
     db.execute(
       '''CREATE TABLE $_donaterTableName ( $columnId INTEGER PRIMARY KEY AUTOINCREMENT, 
         $columnName VARCHAR(20), $columnSurname VARCHAR(20), $columnPhoneNum VARCHAR(20), 
-        $columnEMail VARCHAR(20), $columnDonaterUserName VARCHAR(20), $columnDonaterPassword VARCHAR(20), $columnDonationCount INTEGER, $columnTotalDonationAmount INTEGER,)''',
+        $columnEMail VARCHAR(20), $columnDonaterUserName VARCHAR(20), $columnDonaterPassword VARCHAR(20), $columnDonationCount INTEGER, $columnTotalDonationAmount INTEGER)''',
     );
   }
 
+  @override
   Future<List<DonaterModel>> getList() async {
-    if (database == null) {
-      await open();
-    }
-    if (database != null) {
-      List<Map<String, dynamic>> donaterMaps =
-          await database!.query(_donaterTableName);
-      return donaterMaps.map((e) => DonaterModel.fromJson(e)).toList();
-    } else {
-      throw Exception("Database is not open");
-    }
+    List<Map<String, dynamic>> donaterMaps =
+        await database.query(_donaterTableName);
+    return donaterMaps.map((e) => DonaterModel.fromJson(e)).toList();
   }
 
+  @override
   Future<DonaterModel> getItem(int id) async {
-    if (database == null) {
-      await open();
-    }
-    if (database != null) {
-      List<Map<String, dynamic>> donaterMaps = await database!.query(
-        _donaterTableName,
-        where: '$columnId = ?',
-        whereArgs: [id],
-      );
-      if (donaterMaps.isNotEmpty) {
-        return DonaterModel.fromJson(donaterMaps.first);
-      } else {
-        throw Exception("Item not found");
-      }
+    List<Map<String, dynamic>> donaterMaps = await database.query(
+      _donaterTableName,
+      where: '$columnId = ?',
+      whereArgs: [id],
+    );
+    if (donaterMaps.isNotEmpty) {
+      return DonaterModel.fromJson(donaterMaps.first);
     } else {
-      throw Exception("Database is not open");
+      throw Exception("Item not found");
     }
   }
 
+  @override
   Future<bool> insertItem(DonaterModel model) async {
-    if (database == null) {
-      await open();
-    }
-    if (database != null) {
-      int result = await database!.insert(
-        _donaterTableName,
-        model.toJson(),
-      );
-      return result > 0;
+    int result = await database.insert(
+      _donaterTableName,
+      model.toJson(),
+    );
+    return result > 0;
+  }
+
+  @override
+  Future<bool> updateItem(int id, DonaterModel model) async {
+    int count = await database.update(
+      _donaterTableName,
+      model.toJson(),
+      where: '$columnId = ?',
+      whereArgs: [id],
+    );
+    return count > 0;
+  }
+
+  @override
+  Future<bool> removeItem(int id) async {
+    int count = await database.delete(
+      _donaterTableName,
+      where: '$columnId = ?',
+      whereArgs: [id],
+    );
+    if (count == 0) {
+      throw Exception("Item not found");
     } else {
-      throw Exception("Database is not open");
+      return true;
     }
   }
 
-  Future<void> deleteItem(int id) async {
-    if (database == null) {
-      await open();
-    }
-    if (database != null) {
-      int count = await database!.delete(
-        _donaterTableName,
-        where: '$columnId = ?',
-        whereArgs: [id],
-      );
-      if (count == 0) {
-        throw Exception("Item not found");
-      }
-    } else {
-      throw Exception("Database is not open");
-    }
-  }
-
-  Future<bool> update(int id, DonaterModel model) async {
-    if (database == null) {
-      await open();
-    }
-    if (database != null) {
-      int count = await database!.update(
-        _donaterTableName,
-        model.toJson(),
-        where: '$columnId = ?',
-        whereArgs: [id],
-      );
-      return count > 0;
-    } else {
-      throw Exception("Database is not open");
-    }
-  }
-
+  @override
   Future<void> close() async {
-    if (database != null) {
-      await database!.close();
-      database = null; // Optionally set to null after closing
-    } else {
-      throw Exception("Database is not open");
-    }
+    await database.close();
   }
 }

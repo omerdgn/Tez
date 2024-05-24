@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
               ),
               toolbarTextStyle:
                   TextStyle(color: ColorUtility.textWhiteColorOfProject))),
-      home: const HomePageView(),
+      home: const HomePageView(), //Donater
     );
   }
 }

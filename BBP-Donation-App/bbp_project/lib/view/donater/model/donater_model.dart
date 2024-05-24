@@ -1,4 +1,6 @@
-class DonaterModel {
+import 'package:bbp_project/core/init/database/database_model.dart';
+
+class DonaterModel extends DatabaseModel<DonaterModel> {
   int? id;
   String? name;
   String? surname;
@@ -44,5 +46,10 @@ class DonaterModel {
     data['donaterUserName'] = this.donaterUserName;
     data['donaterPassword'] = this.donaterPassword;
     return data;
+  }
+
+  @override
+  DonaterModel fromJson(Map<String, dynamic> json) {
+    return DonaterModel.fromJson(json);
   }
 }
