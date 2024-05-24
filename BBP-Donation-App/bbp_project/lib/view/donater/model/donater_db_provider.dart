@@ -63,7 +63,7 @@ class DonaterDbProvider {
     }
   }
 
-  Future<void> insertItem(DonaterModel model) async {
+  Future<bool> insertItem(DonaterModel model) async {
     if (database == null) {
       await open();
     }
@@ -72,9 +72,7 @@ class DonaterDbProvider {
         _donaterTableName,
         model.toJson(),
       );
-      if (result == 0) {
-        throw Exception("Insert operation failed");
-      }
+      return result > 0;
     } else {
       throw Exception("Database is not open");
     }
