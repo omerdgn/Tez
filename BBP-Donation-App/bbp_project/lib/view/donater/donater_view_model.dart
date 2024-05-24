@@ -13,4 +13,9 @@ abstract class DonaterViewModel extends State<Donater> {
     super.initState();
     donaterDbProvider.open();
   }
+
+  Future<void> saveModel() async {
+    final result = await donaterDbProvider.insertItem(donaterModel);
+    print(result); // true or false
+  }
 }
