@@ -12,6 +12,8 @@ class DonaterDbProvider {
   String columnSurname = "surname";
   String columnPhoneNum = "phoneNum";
   String columnEMail = "eMail";
+  String columnDonaterUserName = "donaterUserName";
+  String columnDonaterPassword = "donaterPassword";
   String columnDonationCount = "donationCount";
   String columnTotalDonationAmount = "totalDonationAmount";
 
@@ -26,7 +28,7 @@ class DonaterDbProvider {
     db.execute(
       '''CREATE TABLE $_donaterTableName ( $columnId INTEGER PRIMARY KEY AUTOINCREMENT, 
         $columnName VARCHAR(20), $columnSurname VARCHAR(20), $columnPhoneNum VARCHAR(20), 
-        $columnEMail VARCHAR(20), $columnDonationCount INTEGER, $columnTotalDonationAmount INTEGER)''',
+        $columnEMail VARCHAR(20), $columnDonaterUserName VARCHAR(20), $columnDonaterPassword VARCHAR(20), $columnDonationCount INTEGER, $columnTotalDonationAmount INTEGER,)''',
     );
   }
 
