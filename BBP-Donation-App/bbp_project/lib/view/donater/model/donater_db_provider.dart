@@ -63,6 +63,23 @@ class DonaterDbProvider {
     }
   }
 
+  Future<void> insertItem(DonaterModel model) async {
+    if (database == null) {
+      await open();
+    }
+    if (database != null) {
+      int result = await database!.insert(
+        _donaterTableName,
+        model.toJson(),
+      );
+      if (result == 0) {
+        throw Exception("Insert operation failed");
+      }
+    } else {
+      throw Exception("Database is not open");
+    }
+  }
+
   Future<void> deleteItem(int id) async {
     if (database == null) {
       await open();
