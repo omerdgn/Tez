@@ -1,6 +1,7 @@
 import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/home_page_view.dart';
 import 'package:bbp_project/product/language/languages.dart';
+import 'package:bbp_project/view/donater/donater.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
               ),
               toolbarTextStyle:
                   TextStyle(color: ColorUtility.textWhiteColorOfProject))),
-      home: const HomePageView(), //Donater
+      home: Donater(), //Donater
     );
   }
 }
