@@ -29,7 +29,7 @@ class DonaterModel {
     donationCount = json['donationCount'];
     totalDonationAmount = json['totalDonationAmount'];
     donaterUserName = json['donaterUserName'];
-    donaterPassword = json['password'];
+    donaterPassword = json['donaterPassword'];
   }
 
   Map<String, dynamic> toJson() {
@@ -42,7 +42,7 @@ class DonaterModel {
     data['donationCount'] = this.donationCount;
     data['totalDonationAmount'] = this.totalDonationAmount;
     data['donaterUserName'] = this.donaterUserName;
-    data['password'] = this.donaterPassword;
+    data['donaterPassword'] = this.donaterPassword;
     return data;
   }
 }
