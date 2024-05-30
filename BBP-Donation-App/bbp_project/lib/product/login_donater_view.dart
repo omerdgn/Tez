@@ -4,6 +4,7 @@
 import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/custom_app_bar.dart';
 import 'package:bbp_project/product/custom_elevated_button.dart';
+import 'package:bbp_project/product/donater_main_page_view.dart';
 import 'package:bbp_project/product/language/languages.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _LoginDonaterViewState extends State<LoginDonaterView> {
                     const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: LanguageItems().textFieldLabelTextForMail,
+                    labelText: LanguageItems().textFieldLabelTextForUsername,
                     labelStyle: const TextStyle(
                         color: ColorUtility.textWhiteColorOfProject),
                     focusedBorder: const OutlineInputBorder(
@@ -93,7 +94,13 @@ class _LoginDonaterViewState extends State<LoginDonaterView> {
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: CustomElevatedButton(
                   text: LanguageItems.homePageViewGirisYapButtonText,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DonaterMainPageView()),
+                    );
+                  },
                 ),
               ),
               Padding(

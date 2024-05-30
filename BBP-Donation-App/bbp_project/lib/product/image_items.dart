@@ -9,4 +9,6 @@ class ImageItems {
   final String campusPhoto3 = 'kampus3';
   final String studentSticker = 'student';
   final String donateSticker = 'donate';
+  final String donaterInfoSticker = 'donater_info';
+  final String applicationSticker = 'application';
 }

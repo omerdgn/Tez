@@ -1,4 +1,5 @@
 import 'package:bbp_project/product/home_page_view.dart';
+import 'package:bbp_project/product/sign_up_donater_username_view.dart';
 
 ///Bu class porjedeki text yapılarını bir arada tutarak
 ///düzenleme ve güncellemeyi sağlamak için oluşturuldu
@@ -78,17 +79,45 @@ class LanguageItems {
   final String signUpApplicantViewMainText = "Aktif OBS Kaydı İle Başvuru Yap";
   //diğer değişkenler login_applicant_view.dart ile aynı
 
-  //sign_up_donater_view.dart
-
-  //login_donater_view.dart
-  final String loginDonaterViewMainText = "Bağışçı Hesabına Giriş Yap";
-  final String textFieldLabelTextForMail = "E-Posta";
-  final String textFieldLabelTextForPassword = "Şifre";
-  final String textForForgottenPasswordButton = "Şifremi Unuttum";
-
   //login_applicant_view.dart
   final String loginApplicantViewMainText = "Aktif OBS Hesabına Giriş Yap";
   final String textFieldLabelTextForUniversityObsStudentNumber =
       "OBS Numarası (Üniversite Öğrenci Numarası)";
   final String textFieldLabelTextForObsPassword = "OBS Şifresi";
+
+  //applicant_main_page_view.dart
+  final String applicantMainPageMainText = "Ne Yapmak İstersiniz?";
+  final String applicantMainPageMakeApplicationTitle = "Başvuru Yapmak";
+  final String applicantMainPageMakeApplicationCaption =
+      "Üniveristemizin öğrencisi olarak bilgisayar bursuna başvurmak istiyorum.";
+  final String applicantMainPageShowApplicationStateTitle =
+      "Başvuru Durumu Görmek";
+  final String applicantMainPageShowApplicationStateCaption =
+      "Yapmış olduğum başvurunun anlık durumunu incelemek istiyorum.";
+
+  //sign_up_donater_username_view.dart
+  final String signUpDonaterUsernameViewTextFieldLabelText =
+      "Lütfen Kullanıcı Adı Giriniz";
+  final String textForSignUpDonaterUsernameViewNextButton = "Sonraki";
+
+  //sign_up_donater_password_view.dart
+  final String signUpDonaterPasswordViewTextFieldLabelPasswordText = "Şifre";
+  final String signUpDonaterPasswordViewTextFieldLabelPasswordAgainText =
+      "Şifre Tekrar";
+  final String passwordMismatchError = "Şifreler eşleşmiyor!";
+
+  //login_donater_view.dart
+  final String loginDonaterViewMainText = "Bağışçı Hesabına Giriş Yap";
+  final String textFieldLabelTextForUsername = "Kullanıcı Adı"; //eskiden maildi
+  final String textFieldLabelTextForPassword = "Şifre";
+  final String textForForgottenPasswordButton = "Şifremi Unuttum";
+
+  //donater_main_page.dart
+  final String donaterMainPageMainText = "Ne Yapmak İstersiniz?";
+  final String donaterMainPageMakeDonationTtile = "Bağış Yapmak";
+  final String donaterMainPageMakeDonationCaption =
+      "Üniversite öğrencilerine bilgisayar temin edilmesine yönelik maddi katkıda bulunmak istiyorum.";
+  final String donaterMainPageShowDonaterInfoTitle = "Bilgilerimi Görmek";
+  final String donaterMainPageShowDonaterInfoCaption =
+      "Bağışçı profilimdeki bilgilerimi incelemek istiyorum.";
 }

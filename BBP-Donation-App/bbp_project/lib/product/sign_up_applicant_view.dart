@@ -1,6 +1,7 @@
 /// Bu class account_type_choosing_new_account_view ekranındaki Başvuru Hesabı textli butona tıklandığında
 /// Başvuru hesabı kaydı yapılabilmek için oluşturuldu.
 
+import 'package:bbp_project/product/applicant_main_page_view.dart';
 import 'package:bbp_project/product/colors_utility.dart';
 import 'package:bbp_project/product/custom_app_bar.dart';
 import 'package:bbp_project/product/custom_elevated_button.dart';
@@ -92,7 +93,13 @@ class _SignUpApplicantViewState extends State<SignUpApplicantView> {
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: CustomElevatedButton(
                   text: LanguageItems.homePageViewGirisYapButtonText,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ApplicantMainPageView()),
+                    );
+                  },
                 ),
               ),
 
