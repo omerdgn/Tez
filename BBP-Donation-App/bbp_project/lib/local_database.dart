@@ -26,12 +26,8 @@ class LocalDatabase {
     await db.execute('''
       CREATE TABLE DonaterTable(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        surname TEXT NOT NULL,
-        phoneNum TEXT NOT NULL,
-        eMail TEXT NOT NULL,
-        donationCount INTEGER,
-        totalDonationAmount INTEGER
+        username TEXT NOT NULL,
+        password TEXT NOT NULL
       )
     ''');
 
@@ -77,28 +73,20 @@ class LocalDatabase {
     ''');
   }
 
-  // Tablolara veri ekleme fonksiyonları
-
+  // DonaterTable'a veri ekleme fonksiyonu
   Future<void> addDataToDonaterTable({
-    required String name,
-    required String surname,
-    required String phoneNum,
-    required String eMail,
-    required int donationCount,
-    required int totalDonationAmount,
+    required String username,
+    required String password,
   }) async {
     final db = await database;
     await db.insert("DonaterTable", {
-      "name": name,
-      "surname": surname,
-      "phoneNum": phoneNum,
-      "eMail": eMail,
-      "donationCount": donationCount,
-      "totalDonationAmount": totalDonationAmount,
+      "username": username,
+      "password": password,
     });
     print("Added to DonaterTable successfully");
   }
 
+  // Diğer tablolara veri ekleme fonksiyonları
   Future<void> addDataToDonationTable({
     required int donaterId,
     required int donationAmount,
@@ -161,8 +149,7 @@ class LocalDatabase {
     print("Added to ComputerTable successfully");
   }
 
-  // Tablodan belirli bir id'ye göre verileri getiren fonksiyonlar:
-
+  // Belirli bir id'ye göre verileri getiren fonksiyonlar
   Future<Map<String, dynamic>?> getDonaterById(int id) async {
     final db = await database;
     final result = await db.query(
@@ -213,13 +200,12 @@ class LocalDatabase {
     return result.isNotEmpty ? result.first : null;
   }
 
-  // İlişkili verileri getiren fonksiyonlar:
-
+  // İlişkili verileri getiren fonksiyonlar
   Future<List<Map<String, dynamic>>> getDonationsByDonaterId(
       int donaterId) async {
     final db = await database;
     final result = await db.rawQuery('''
-      SELECT DonationTable.*, DonaterTable.name, DonaterTable.surname 
+      SELECT DonationTable.*, DonaterTable.username 
       FROM DonationTable 
       INNER JOIN DonaterTable ON DonationTable.donaterId = DonaterTable.id 
       WHERE DonaterTable.id = ?
@@ -254,27 +240,18 @@ class LocalDatabase {
     return result;
   }
 
-  // Tabloları güncelleyen fonksiyonlar:
-
+  // Tabloları güncelleyen fonksiyonlar
   Future<int> updateDonater({
     required int id,
-    required String name,
-    required String surname,
-    required String phoneNum,
-    required String eMail,
-    required int donationCount,
-    required int totalDonationAmount,
+    required String username,
+    required String password,
   }) async {
     final db = await database;
     return await db.update(
       "DonaterTable",
       {
-        "name": name,
-        "surname": surname,
-        "phoneNum": phoneNum,
-        "eMail": eMail,
-        "donationCount": donationCount,
-        "totalDonationAmount": totalDonationAmount,
+        "username": username,
+        "password": password,
       },
       where: "id = ?",
       whereArgs: [id],
@@ -361,8 +338,7 @@ class LocalDatabase {
     );
   }
 
-  // Tablolardan veri silen fonksiyonlar:
-
+  // Tablolardan veri silen fonksiyonlar
   Future<int> deleteDonater(int id) async {
     final db = await database;
     return await db.delete(
