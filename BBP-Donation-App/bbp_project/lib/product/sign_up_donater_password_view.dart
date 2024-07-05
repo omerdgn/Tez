@@ -9,7 +9,6 @@ class SignUpDonaterPasswordView extends StatefulWidget {
   const SignUpDonaterPasswordView({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _SignUpDonaterPasswordViewState createState() =>
       _SignUpDonaterPasswordViewState();
 }
