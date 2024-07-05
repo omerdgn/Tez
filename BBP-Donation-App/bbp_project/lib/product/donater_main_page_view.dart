@@ -149,7 +149,7 @@ class _DonaterMainPageState extends State<DonaterMainPageView> {
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 DonaterInfoView(
-                                                  donationId: 4, //DEĞİŞEN KISIM
+                                                  donationId: 1, //DEĞİŞEN KISIM
                                                 )),
                                       );
                                     }),

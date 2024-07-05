@@ -149,7 +149,7 @@ class _ApplicantMainPageViewState extends State<ApplicantMainPageView> {
                                             builder: (context) =>
                                                 ApplicantInfoView(
                                                   applicantId:
-                                                      4, //DEĞİŞEN KISIM
+                                                      1, //DEĞİŞEN KISIM
                                                 )),
                                       );
                                     }),
